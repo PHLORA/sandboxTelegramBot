@@ -11,6 +11,8 @@ using TgBot;
 var cts = new CancellationTokenSource();
 var botClient = new TelegramBotClient("6454828135:AAHEClrhq9RF44QFQVyKSqz1EiYahklMVlo");
 
+await botClient.DeleteWebhookAsync();
+
 var userState = new Dictionary<long, string>();
 var dbContext = new ApplicationDbContext();
 var repo = new ElectrocityRepos(dbContext);
